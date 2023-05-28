@@ -12,8 +12,9 @@
             let Add = new AddMenu(MenuList);
             let Random = new RandomMenu(MenuList);
         
-            var textPrint = document.createTextNode(Add.MenuList.join(" "));
-            document.getElementById("MenuList").appendChild(textPrint);
+            var spanElement = document.createElement("span");
+            spanElement.textContent = Add.MenuList.join(" ");
+            document.getElementById("MenuList").appendChild(spanElement);
         </script>
         
         <button onclick="RandomFunction()">메뉴추천</button>
