@@ -13,21 +13,21 @@ class AddMenu
 
 AddMenu.prototype.showMenu() = function()
 {
-    for (let i = 0; i < MenuList.length; i++)
+    for (let i = 0; i < this.MenuList.length; i++)
     {
-        document.write(MenuList[i]+" ");
+        document.write(this.MenuList[i]+" ");
     }
     document.write("\n");
 }
 
 AddMenu.prototype.inputMenu() = function()
 {
-    M = prompt("추가할 메뉴는 무엇입니까?");
+    this.M = prompt("추가할 메뉴는 무엇입니까?");
 }
 
 AddMenu.prototype.addMenu() = function()
 {
-    MenuList.add(M);
+    this.MenuList.push(M);
 }
 
 

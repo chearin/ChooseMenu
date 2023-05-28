@@ -13,12 +13,11 @@ class RandomMenu
 
 RandomMenu.prototype.chooseMenu() = function()
 {
-     
-    choice = Math.random()*100 % MenuList.length;
+    this.choice = Math.random()*100 % this.MenuList.length;
 }
 
 RandomMenu.prototype.showResult() = function()
 {
-    result = MenuList[choice];
-    document.write(result);
+    this.result = this.MenuList[this.choice];
+    document.write(this.result);
 }
