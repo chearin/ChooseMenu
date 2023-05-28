@@ -12,9 +12,8 @@
             let Add = new AddMenu(MenuList);
             let Random = new RandomMenu(MenuList);
         
-            var spanElement = document.createElement("span");
-            spanElement.textContent = Add.MenuList.join(" ");
-            document.getElementById("MenuList").appendChild(spanElement);
+            var textPrint = document.createTextNode(Add.MenuList.join(" "));
+            document.getElementById("MenuList").appendChild(textPrint);
         </script>
         
         <button onclick="RandomFunction()">메뉴추천</button>
@@ -22,13 +21,13 @@
         <script>
             function RandomFunction()
             {
-                Add.showMenu();
                 //추천 버튼을 누르면
                 Random.chooseMenu();
                 Random.showResult();
             }
             function AddFunction()
-            {                
+            {    
+                Add.showMenu();            
                 //메뉴추가 버튼을 누르면
                 Add.inputMenu();
                 Add.addMenu();

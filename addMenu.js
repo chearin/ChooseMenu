@@ -13,11 +13,14 @@ class AddMenu
 
 AddMenu.prototype.showMenu = function()
 {
+    /*
     for (let i = 0; i < this.MenuList.length; i++)
     {
         document.write(this.MenuList[i]+" ");
     }
-    document.write("\n");
+    document.write("\n");*/
+    document.createTextNode(this.MenuList.join(" "));
+    document.getElementById("MenuList").appendChild(textPrint);
 }
 
 AddMenu.prototype.inputMenu = function()
