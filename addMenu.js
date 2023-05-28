@@ -11,7 +11,7 @@ class AddMenu
     addMenu();
 };
 
-AddMenu.prototype.showMenu() = functin()
+AddMenu.prototype.showMenu() = function()
 {
     for (let i = 0; i < MenuList.length; i++)
     {
