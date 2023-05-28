@@ -11,7 +11,7 @@ class AddMenu
     addMenu();
 };
 
-AddMenu.prototype.showMenu() = function()
+AddMenu.prototype.showMenu = function()
 {
     for (let i = 0; i < this.MenuList.length; i++)
     {
@@ -20,12 +20,12 @@ AddMenu.prototype.showMenu() = function()
     document.write("\n");
 }
 
-AddMenu.prototype.inputMenu() = function()
+AddMenu.prototype.inputMenu = function()
 {
     this.M = prompt("추가할 메뉴는 무엇입니까?");
 }
 
-AddMenu.prototype.addMenu() = function()
+AddMenu.prototype.addMenu = function()
 {
     this.MenuList.push(M);
 }

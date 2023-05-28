@@ -11,12 +11,12 @@ class RandomMenu
     showResult();
 };
 
-RandomMenu.prototype.chooseMenu() = function()
+RandomMenu.prototype.chooseMenu = function()
 {
-    this.choice = Math.random()*100 % this.MenuList.length;
+    this.choice = Math.floor(Math.random()*100 % this.MenuList.length);
 }
 
-RandomMenu.prototype.showResult() = function()
+RandomMenu.prototype.showResult = function()
 {
     this.result = this.MenuList[this.choice];
     document.write(this.result);
