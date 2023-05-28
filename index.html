@@ -11,6 +11,9 @@
             let Add = new AddMenu(MenuList);
             let Random = new RandomMenu(MenuList);
         </script>
+        <script>
+            Add.showMenu();
+        </script>
         <button onclick="RandomFunction()">메뉴추천</button>
         <button onclick="AddFunction()">메뉴추가</button>
         <script>
@@ -21,8 +24,7 @@
                 Random.showResult();
             }
             function AddFunction()
-            {
-                Add.showMenu();
+            {                
                 //메뉴추가 버튼을 누르면
                 Add.inputMenu();
                 Add.addMenu();
