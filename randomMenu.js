@@ -7,17 +7,13 @@ class RandomMenu
     choice;
     result;
 
-    chooseMenu();
-    showResult();
+    chooseMenu()
+    {
+        this.choice = Math.floor(Math.random() * 100) % this.MenuList.length;
+    }
+    showResult()
+    {
+        this.result = this.MenuList[this.choice];
+        document.getElementById("printResult").innerHTML = this.result;
+    }
 };
-
-RandomMenu.prototype.chooseMenu = function()
-{
-    this.choice = Math.floor(Math.random()*100 % this.MenuList.length);
-}
-
-RandomMenu.prototype.showResult = function()
-{
-    this.result = this.MenuList[this.choice];
-    document.write(this.result);
-}

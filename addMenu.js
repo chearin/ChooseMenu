@@ -6,34 +6,19 @@ class AddMenu
     }
     M; //add Menu
   
-    showMenu();
-    inputMenu();
-    addMenu();
-};
-
-AddMenu.prototype.showMenu = function()
-{
-    /*
-    for (let i = 0; i < this.MenuList.length; i++)
+    showMenu()
     {
-        document.write(this.MenuList[i]+" ");
+        var textPrint = document.createTextNode(this.MenuList.join(" "));
+        document.getElementById("printList").appendChild(textPrint);
     }
-    document.write("\n");*/
-    document.createTextNode(this.MenuList.join(" "));
-    document.getElementById("MenuList").appendChild(textPrint);
-}
-
-AddMenu.prototype.inputMenu = function()
-{
-    this.M = prompt("추가할 메뉴는 무엇입니까?");
-}
-
-AddMenu.prototype.addMenu = function()
-{
-    this.MenuList.push(M);
-}
-
-
-
-// let object = new AddMenu();
-// Object.showMenu();
+    inputMenu()
+    {
+        this.M = prompt("추가할 메뉴는 무엇입니까?");
+    }
+    addMenu()
+    {
+        this.MenuList.push(this.M);
+        var textPrint = document.createTextNode(" "+this.MenuList[this.MenuList.length-1]);
+        document.getElementById("printList").appendChild(textPrint);
+    }
+};
