@@ -8,8 +8,9 @@ class AddMenu
   
     showMenu()
     {
-        var textPrint = document.createTextNode(this.MenuList.join(" "));
-        document.getElementById("printList").appendChild(textPrint);
+        //var textPrint = document.createTextNode(this.MenuList.join(" "));
+        //document.getElementById("printList").appendChild(textPrint);
+        document.getElementById("printList").innerHTML = this.MenuList.join(" ");
     }
     inputMenu()
     {
@@ -18,7 +19,8 @@ class AddMenu
     addMenu()
     {
         this.MenuList.push(this.M);
-        var textPrint = document.createTextNode(" "+this.MenuList[this.MenuList.length-1]);
-        document.getElementById("printList").appendChild(textPrint);
+        //var textPrint = document.createTextNode(" "+this.MenuList[this.MenuList.length-1]);
+        //document.getElementById("printList").appendChild(textPrint);
+        document.getElementById("printList").innerHTML = this.MenuList.join(" ");
     }
 };
